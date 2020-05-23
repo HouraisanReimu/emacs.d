@@ -3,6 +3,11 @@
   (interactive)
   (find-file "~/.emacs.d/init.el"))
 
+;; 快速打开键位配置文件
+(defun open-kbd-file()
+  (interactive)
+  (find-file "~/.emacs.d/lisp/init-keybindings.el"))
+
 ;;配对括号高亮
 (define-advice show-paren-function (:around (fn) fix-show-paren-function)
   "Highlight enclosing parens."
@@ -14,7 +19,6 @@
 ;;自动补全
 (global-company-mode 1)
 (add-hook 'after-init-hook 'global-company-mode)
-
 
 (delete-selection-mode 1)
 

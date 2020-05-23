@@ -1,5 +1,6 @@
 ;; 这一行代码，将函数 open-init-file 绑定到 <f2> 键上
 (global-set-key (kbd "<f2>") 'open-init-file)
+(global-set-key (kbd "<f3>") 'open-kbd-file) 
 
 ;; 最近打开的文件
 (global-set-key "\C-x\ \C-r" 'recentf-open-files)
@@ -15,14 +16,15 @@
 (evil-leader/set-key
   "ff" 'find-file
   "bb" 'switch-to-buffer
-  "0"  'select-window-0
+  "0"  'delete-other-windows
+  ;; "0"  'select-window-0
   "1"  'select-window-1
   "2"  'select-window-2
   "3"  'select-window-3
   "w/" 'split-window-right
   "w-" 'split-window-below
   ":"  'counsel-M-x
-  "wM" 'delete-other-windows
+  ;; "wM" 'delete-other-windows
   )
 
 ;; (define-key evil-normal-state-map (kbd ",/") 'evilnc-comment-or-uncomment-lines)
