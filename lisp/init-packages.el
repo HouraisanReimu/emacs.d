@@ -28,6 +28,7 @@
 		      evil-nerd-commenter
 		      which-key
 		      paredit
+		      mic-paren
 		      ;; --- Major Mode ---
 		      js2-mode
 		      ;; --- Minor Mode ---
@@ -116,6 +117,13 @@
 
 ;;每一次进入 Dired 模式时，使用新的快捷键 C-x C-j 就可以进 入当前文件夹的所在的路径。
 (use-package dired-x)
+
+;;启动括号高亮匹配
+;; (require 'highlight-parentheses)
+;; (highlight-parentheses-mode 1)
+
+(paren-activate) ;; activates mic-paren
+(setq paren-highlight-offscreen t) 
 
 ;; 文件末尾
 (provide 'init-packages)

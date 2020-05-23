@@ -8,13 +8,19 @@
   (interactive)
   (find-file "~/.emacs.d/lisp/init-keybindings.el"))
 
+;; 快速打开键位配置文件
+(defun open-pkg-file()
+  (interactive)
+  (find-file "~/.emacs.d/lisp/init-packages.el"))
+
 ;;配对括号高亮
-(define-advice show-paren-function (:around (fn) fix-show-paren-function)
-  "Highlight enclosing parens."
-  (cond ((looking-at-p "\\s(") (funcall fn))
-	(t (save-excursion
-	     (ignore-errors (backward-up-list))
-	     (funcall fn)))))
+;; (define-advice show-paren-function (:around (fn) fix-show-paren-function)
+;;   "Highlight enclosing parens."
+;;   (cond ((looking-at-p "\\s(") (funcall fn))
+;; 	(t (save-excursion
+;; 	     (ignore-errors (backward-up-list))
+	     ;; (funcall fn)))))
+;; (show-paren-mode 1)
 
 ;;自动补全
 (global-company-mode 1)
