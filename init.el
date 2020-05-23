@@ -15,9 +15,9 @@
 (require 'init-org)
 
 (require 'init-scheme)
- ;; Find Executable Path on OS X
- (when (memq window-system '(mac ns))
-   (exec-path-from-shell-initialize))
+;; Find Executable Path on OS X
+(when (memq window-system '(mac ns))
+  (exec-path-from-shell-initialize))
 
 (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
 
@@ -26,9 +26,9 @@
 (defconst *is-a-mac* (eq system-type 'darwin))
 
 (defun fullscreen ()
-    (interactive)
-    (set-frame-parameter nil 'fullscreen
-                         (if (frame-parameter nil 'fullscreen) nil 'fullboth)))
+  (interactive)
+  (set-frame-parameter nil 'fullscreen
+		       (if (frame-parameter nil 'fullscreen) nil 'fullboth)))
 
 (fullscreen)
 
