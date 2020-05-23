@@ -14,6 +14,7 @@
 
 (require 'init-org)
 
+(require 'init-scheme)
  ;; Find Executable Path on OS X
  (when (memq window-system '(mac ns))
    (exec-path-from-shell-initialize))
@@ -30,3 +31,9 @@
                          (if (frame-parameter nil 'fullscreen) nil 'fullboth)))
 
 (fullscreen)
+
+;;设置括号颜色
+(use-package parenface
+  :config
+  (set-face-foreground 'paren-face "DimGray")
+  )
