@@ -1,5 +1,7 @@
 (package-initialize)
 
+(setenv "HOME" "F:/emacs/")
+
 (add-to-list 'load-path "~/.emacs.d/lisp/")
 
 ;; Package Management
