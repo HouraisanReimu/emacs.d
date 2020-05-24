@@ -15,6 +15,8 @@
 (require 'init-org)
 
 (require 'init-scheme)
+
+(require 'fun-lib)
 ;; Find Executable Path on OS X
 (when (memq window-system '(mac ns))
   (exec-path-from-shell-initialize))

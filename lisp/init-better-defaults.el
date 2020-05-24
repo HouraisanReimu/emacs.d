@@ -8,10 +8,15 @@
   (interactive)
   (find-file "~/.emacs.d/lisp/init-keybindings.el"))
 
-;; 快速打开键位配置文件
+;; 快速打开包配置文件
 (defun open-pkg-file()
   (interactive)
   (find-file "~/.emacs.d/lisp/init-packages.el"))
+
+;; 快速打开编辑器配置文件
+(defun open-def-file()
+  (interactive)
+  (find-file "~/.emacs.d/lisp/init-better-defaults.el"))
 
 ;;配对括号高亮
 ;; (define-advice show-paren-function (:around (fn) fix-show-paren-function)
@@ -30,6 +35,26 @@
 
 ;;自动加载外部修改过的文件
 (global-auto-revert-mode 1)
+
+;;打开上次退出时打开的文件
+(desktop-save-mode 1)
+;;忽略是否加载的提问
+(setq desktop-load-locked-desktop t)
+
+;;打开上次的文件记录
+
+;; (load "desktop") 
+
+;; (desktop-load-default)
+
+;; (desktop-read)
+
+;;当emacs退出时保存文件打开状态
+
+;; (add-hook 'kill-emacs-hook
+
+;;           '(lambda()(desktop-save "~/")))
+
 
 ;; 将 (yes or no) 简化为 (y or n)
 (fset 'yes-or-no-p 'y-or-n-p)
