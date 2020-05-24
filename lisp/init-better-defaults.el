@@ -1,32 +1,14 @@
-;; 快速打开配置文件
-(defun open-init-file()
-  (interactive)
-  (find-file "~/.emacs.d/init.el"))
-
-;; 快速打开键位配置文件
-(defun open-kbd-file()
-  (interactive)
-  (find-file "~/.emacs.d/lisp/init-keybindings.el"))
-
-;; 快速打开包配置文件
-(defun open-pkg-file()
-  (interactive)
-  (find-file "~/.emacs.d/lisp/init-packages.el"))
-
-;; 快速打开编辑器配置文件
-(defun open-def-file()
-  (interactive)
-  (find-file "~/.emacs.d/lisp/init-better-defaults.el"))
-
-;;配对括号高亮
+;;括号补全
 (electric-pair-mode t)
-;; (define-advice show-paren-function (:around (fn) fix-show-paren-function)
-;;   "Highlight enclosing parens."
-;;   (cond ((looking-at-p "\\s(") (funcall fn))
-;; 	(t (save-excursion
-;; 	     (ignore-errors (backward-up-list))
-	     ;; (funcall fn)))))
-;; (show-paren-mode 1)
+;;配对括号高亮
+(show-paren-mode 1)
+;;在括号内显示目前所在括号
+(define-advice show-paren-function (:around (fn) fix-show-paren-function)
+  "Highlight enclosing parens."
+  (cond ((looking-at-p "\\s(") (funcall fn))
+	(t (save-excursion
+	     (ignore-errors (backward-up-list))
+	     (funcall fn)))))
 
 ;;自动补全
 (global-auto-complete-mode 1)
@@ -65,16 +47,16 @@
 (setq ring-bell-function 'ignore)
 
 ;;Hippie Expand补全
-(setq hippie-expand-try-function-list '(try-expand-debbrev
-					try-expand-debbrev-all-buffers
-					try-expand-debbrev-from-kill
-					try-complete-file-name-partially
-					try-complete-file-name
-					try-expand-all-abbrevs
-					try-expand-list
-					try-expand-line
-					try-complete-lisp-symbol-partially
-					try-complete-lisp-symbol))
+;;(setq hippie-expand-try-function-list '(try-expand-debbrev
+;;					try-expand-debbrev-all-buffers
+;;					try-expand-debbrev-from-kill
+;;					try-complete-file-name-partially
+;;					try-complete-file-name
+;;					try-expand-all-abbrevs
+;;					try-expand-list
+;;					try-expand-line
+;;					try-complete-lisp-symbol-partially
+;;					try-complete-lisp-symbol))
 
 ;;Dired Mode重用唯一缓冲区
 (put 'dired-find-alternate-file 'disabled nil)
@@ -87,9 +69,10 @@
 (with-eval-after-load 'dired
   (define-key dired-mode-map (kbd "RET") 'dired-find-alternate-file))
 
-
 (prefer-coding-system 'utf-8) 
 
 (set-language-environment "UTF-8")
+;;解决换成UTF-8后很卡的问题，来自https://emacs.stackexchange.com/questions/33510/unicode-txt-slowness
+(setq inhibit-compacting-font-caches t)
 
 (provide 'init-better-defaults)

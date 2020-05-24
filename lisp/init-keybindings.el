@@ -32,6 +32,7 @@
   "w/" 'split-window-right
   "w-" 'split-window-below
   ":"  'counsel-M-x
+  "lb" 'open-lib-file 
   ;; "wM" 'delete-other-windows
   )
 

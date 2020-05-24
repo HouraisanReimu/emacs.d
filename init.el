@@ -23,10 +23,8 @@
 (when (memq window-system '(mac ns))
   (exec-path-from-shell-initialize))
 
-(add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
-
-
-(defconst *spell-check-support-enabled* t) ;; Enable with t if you prefer
+;; (defconst *spell-check-support-enabled* t) ;; Enable with t if you prefer
+;; (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
 (defconst *is-a-mac* (eq system-type 'darwin))
 
 (defun fullscreen ()

@@ -12,7 +12,8 @@
 ;; Add Packages
 (defvar my/packages '(
 		      ;; --- Auto-completion ---
-		      company
+		      ;;company
+		      auto-complete
 		      ;; --- Better Editor ---
 		      hungry-delete
 		      swiper
@@ -28,7 +29,7 @@
 		      evil-nerd-commenter
 		      which-key
 		      paredit
-		      mic-paren
+		      ;;mic-paren
 		      ;; --- Major Mode ---
 		      js2-mode
 		      ;; --- Minor Mode ---
@@ -85,7 +86,7 @@
   (evil-mode 1)
   )
 
-;;快捷注释插件启动，The hotkey is “,cl” in evil-mode and “M-;” in all modes. “M” means ALT key.
+;; ;;快捷注释插件启动，The hotkey is “,cl” in evil-mode and “M-;” in all modes. “M” means ALT key.
 (evilnc-default-hotkeys)
 
 ;; 显示当前有哪些可用快捷键
