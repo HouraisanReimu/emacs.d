@@ -19,6 +19,7 @@
   (find-file "~/.emacs.d/lisp/init-better-defaults.el"))
 
 ;;配对括号高亮
+(electric-pair-mode t)
 ;; (define-advice show-paren-function (:around (fn) fix-show-paren-function)
 ;;   "Highlight enclosing parens."
 ;;   (cond ((looking-at-p "\\s(") (funcall fn))
@@ -28,8 +29,9 @@
 ;; (show-paren-mode 1)
 
 ;;自动补全
-(global-company-mode 1)
-(add-hook 'after-init-hook 'global-company-mode)
+(global-auto-complete-mode 1)
+;;(global-company-mode 1)
+;;(add-hook 'after-init-hook 'global-company-mode)
 
 (delete-selection-mode 1)
 

@@ -122,8 +122,8 @@
 ;; (require 'highlight-parentheses)
 ;; (highlight-parentheses-mode 1)
 
-(paren-activate) ;; activates mic-paren
-(setq paren-highlight-offscreen t) 
+;;(paren-activate) ;; activates mic-paren
+;;(setq paren-highlight-offscreen t) 
 
 ;; 文件末尾
 (provide 'init-packages)
