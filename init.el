@@ -1,9 +1,8 @@
 (package-initialize)
 
-(setenv "HOME" "F:/emacs/")
+(setenv "HOME" "G:/emacs/")
 
-(add-to-list 'load-path "~/.emacs.d/lisp/")
-
+(add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
 ;; Package Management
 ;; -----------------------------------------------------------------
 (require 'init-packages)
