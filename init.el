@@ -1,6 +1,9 @@
 (package-initialize)
 
-(setenv "HOME" "G:/emacs/")
+;; (setenv "HOME" "G:/emacs/")
+(defvar PortableHome (substring data-directory 0 3))
+(defvar usb-home-dir (concat PortableHome "emacs/"))
+(setenv "HOME" usb-home-dir)
 
 (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
 ;; Package Management
