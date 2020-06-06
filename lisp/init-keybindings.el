@@ -32,7 +32,7 @@
   "w/" 'split-window-right
   "w-" 'split-window-below
   ":"  'counsel-M-x
-  ;; "lb" 'open-lib-file 
+  "lb" 'open-lib-file 
   "or" 'org-roam
   "of" 'org-roam-find-file
   "og" 'org-roam-show-graph
