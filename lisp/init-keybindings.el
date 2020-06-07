@@ -37,6 +37,7 @@
   "of" 'org-roam-find-file
   "og" 'org-roam-show-graph
   "oi" 'org-roam-insert
+  "ot" 'insert-current-time 
   ;; "wM" 'delete-other-windows
   )
 

@@ -3,7 +3,7 @@
   (package-initialize)
   (setq package-archives '(;;("gnu"   . "http://elpa.emacs-china.org/gnu/")
 			   ;;("melpa" . "http://elpa.emacs-china.org/melpa/")
-			   ;;("melpa" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")
+			   ("melpa" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")
 			   ("gnu"   . "http://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")
 			   ("melpa-stable" . "http://mirrors.tuna.tsinghua.edu.cn/elpa/melpa-stable/"))))
 
@@ -30,11 +30,11 @@
 		      evil-nerd-commenter
 		      which-key
 		      paredit
-		      ;;mic-paren
+			  ;;mic-paren
 		      ;; --- Major Mode ---
-		      js2-mode
+		      ;;js2-mode
 		      ;; --- Minor Mode ---
-		      nodejs-repl
+		      ;;nodejs-repl
 		      exec-path-from-shell
 		      ;; --- Themes ---
 		      monokai-theme
@@ -42,6 +42,10 @@
 		      ;; --- Org Mode --
 		      org
 		      org-roam
+		      org-journal
+		      org-bullets
+		      ;; --- backend ---
+		      ;;emacsql-sqlite3
 		      ) "Default packages")
 ;;安装
 (setq package-selected-packages my/packages)
