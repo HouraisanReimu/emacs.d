@@ -21,9 +21,9 @@
 (global-auto-revert-mode 1)
 
 ;;打开上次退出时打开的文件
-(desktop-save-mode 1)
+;;(desktop-save-mode 1)
 ;;忽略是否加载的提问
-(setq desktop-load-locked-desktop t)
+;;(setq desktop-load-locked-desktop t)
 
 ;;打开上次的文件记录
 

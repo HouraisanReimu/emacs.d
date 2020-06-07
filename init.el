@@ -1,9 +1,28 @@
+(defvar best-gc-cons-threshold
+  4000000
+  "Best default gc threshold value.  Should NOT be too big!")
+
+;; don't GC during startup to save time
+(setq gc-cons-threshold most-positive-fixnum)
+
+(setq emacs-load-start-time (current-time))
+
+;; {{ emergency security fix
+;; https://bugs.debian.org/766397
+(with-eval-after-load 'enriched
+  (defun enriched-decode-display-prop (start end &optional param)
+    (list start end)))
+
+
 (package-initialize)
 
-(setenv "HOME" "F:/emacs/")
+;; (setenv "HOME" "G:/emacs/")
+(defvar PortableHome (substring data-directory 0 3))
+(defvar usb-home-dir (concat PortableHome "emacs/"))
+(setenv "HOME" usb-home-dir)
+(setenv "PATH" "%PATH%")
 
-(add-to-list 'load-path "~/.emacs.d/lisp/")
-
+(add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
 ;; Package Management
 ;; -----------------------------------------------------------------
 (require 'init-packages)
