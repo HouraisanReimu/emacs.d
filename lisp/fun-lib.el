@@ -73,4 +73,13 @@ Note the weekly scope of the command's precision.")
   (save-excursion
     (indent-region (point-min) (point-max) nil)))
 
+;; 在org-mode里显示图片
+(defun org-toggle-iimage-in-org ()
+  "display images in your org file"
+  (interactive)
+  (if (face-underline-p 'org-link)
+      (set-face-underline-p 'org-link nil)
+      (set-face-underline-p 'org-link t))
+  (iimage-mode))
+
 (provide 'fun-lib)

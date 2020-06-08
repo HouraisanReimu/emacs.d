@@ -44,6 +44,7 @@
 		      org-roam
 		      org-journal
 		      org-bullets
+		      iimage
 		      ;; --- backend ---
 		      ;;emacsql-sqlite3
 		      ) "Default packages")

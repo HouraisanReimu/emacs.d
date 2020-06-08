@@ -15,6 +15,10 @@
 ;;(global-company-mode 1)
 ;;(add-hook 'after-init-hook 'global-company-mode)
 
+;; 图片显示
+(auto-image-file-mode t) 
+
+
 (delete-selection-mode 1)
 
 ;;自动加载外部修改过的文件
