@@ -77,8 +77,8 @@
 ;;(cnfonts-enable)
 
 ;; Setting English Font
-;; (set-face-attribute
-;;   'default nil :font "Sarasa Mono CL 14")
+(set-face-attribute
+  'default nil :font "Consolas 14")
 
 (dolist (charset '(kana han symbol cjk-misc bopomofo))
   (set-fontset-font
