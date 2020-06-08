@@ -30,6 +30,7 @@
 		      evil-nerd-commenter
 		      which-key
 		      paredit
+		      cnfonts
 			  ;;mic-paren
 		      ;; --- Major Mode ---
 		      ;;js2-mode
@@ -44,7 +45,6 @@
 		      org-roam
 		      org-journal
 		      org-bullets
-		      iimage
 		      ;; --- backend ---
 		      ;;emacsql-sqlite3
 		      ) "Default packages")
