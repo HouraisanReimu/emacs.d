@@ -30,6 +30,7 @@
 		      evil-nerd-commenter
 		      which-key
 		      paredit
+		      cnfonts
 			  ;;mic-paren
 		      ;; --- Major Mode ---
 		      ;;js2-mode

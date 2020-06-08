@@ -10,6 +10,8 @@
 	     (ignore-errors (backward-up-list))
 	     (funcall fn)))))
 
+
+
 ;;自动补全
 (global-auto-complete-mode 1)
 ;;(global-company-mode 1)
@@ -70,6 +72,31 @@
   (define-key dired-mode-map (kbd "RET") 'dired-find-alternate-file))
 
 (prefer-coding-system 'utf-8) 
+
+;; 启动cnfonts
+;;(cnfonts-enable)
+
+;; Setting English Font
+;; (set-face-attribute
+;;   'default nil :font "Sarasa Mono CL 14")
+
+(dolist (charset '(kana han symbol cjk-misc bopomofo))
+  (set-fontset-font
+   (frame-parameter nil 'font)
+   charset
+   (font-spec :name "-outline-新宋体-normal-normal-normal-mono-*-*-*-*-c-*-iso10646-1"
+              :weight 'normal
+              :slant 'normal
+              :size 16.0)))
+
+(setq face-font-rescale-alist '("新宋体" . 1.2))
+
+;; Chinese Font
+;; (dolist (charset '(kana han symbol cjk-misc bopomofo))
+;;     (set-fontset-font (frame-parameter nil 'font)
+;;                       charset
+;;                       (font-spec :family "Sarasa Mono CL" :size 16)))
+
 
 (set-language-environment "UTF-8")
 ;;解决换成UTF-8后很卡的问题，来自https://emacs.stackexchange.com/questions/33510/unicode-txt-slowness

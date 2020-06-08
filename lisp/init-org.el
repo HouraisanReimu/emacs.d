@@ -4,7 +4,7 @@
 (use-package org-journal
   :ensure t
   :config
-  (setq org-journal-dir "~/org/journal/"
+  (setq org-journal-dir "~/org/org-roam/"
         org-journal-date-format "%Y-%m-%d,%A"
 	org-journal-file-format "%Y-%m-%d,%A.org"))
 

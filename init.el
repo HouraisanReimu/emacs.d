@@ -7,12 +7,13 @@
 
 (setq emacs-load-start-time (current-time))
 
+(set-default-font "Consolas 14")
+(set-face-bold-p 'bold nil)
 ;; {{ emergency security fix
 ;; https://bugs.debian.org/766397
 (with-eval-after-load 'enriched
   (defun enriched-decode-display-prop (start end &optional param)
     (list start end)))
-
 
 (package-initialize)
 
