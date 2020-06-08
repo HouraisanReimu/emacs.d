@@ -13,6 +13,7 @@
   (defun enriched-decode-display-prop (start end &optional param)
     (list start end)))
 
+
 (package-initialize)
 
 ;; (setenv "HOME" "G:/emacs/")
