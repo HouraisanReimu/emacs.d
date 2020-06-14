@@ -20,7 +20,7 @@
 (defvar PortableHome (substring data-directory 0 3))
 (defvar usb-home-dir (concat PortableHome "emacs/"))
 (setenv "HOME" usb-home-dir)
-(setenv "PATH" "%PATH%")
+;;(setenv "PATH" "%PATH%")
 
 (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
 ;; Package Management
