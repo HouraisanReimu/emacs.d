@@ -34,6 +34,7 @@
 			  ;;mic-paren
 		      ;; --- Major Mode ---
 		      ;;js2-mode
+		      graphviz-dot-mode
 		      ;; --- Minor Mode ---
 		      ;;nodejs-repl
 		      exec-path-from-shell
@@ -134,6 +135,15 @@
 
 ;;(paren-activate) ;; activates mic-paren
 ;;(setq paren-highlight-offscreen t) 
+
+;;  Graphviz支持
+(use-package graphviz-dot-mode
+  :ensure t
+  :config
+  (setq graphviz-dot-indent-width 4))
+
+;;(use-package company-graphviz-dot
+;;  )
 
 ;; 文件末尾
 (provide 'init-packages)
