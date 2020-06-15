@@ -1,6 +1,28 @@
 (require 'org)
 (setq org-src-fontify-natively t)
 
+(setq org-todo-keywords
+      '((sequence "未开始(p!)" "进行中(t!)" "阻塞中(s!)" "|" "已完成(d!)" "已取消(a!)")))
+
+;; 设置任务流程
+;; (setq org-todo-keywords
+      ;; '((sequence "未开始" "进行中(t!)" "阻塞中" "|" "已完成" "已取消")))
+;; 设置任务样式
+(setq org-todo-keyword-faces
+   '(("未开始" .   (:foreground "red" :weight bold))
+    ("阻塞中" .   (:foreground "red" :weight bold))
+    ;; ("进行中" .      (:foreground "orange" :weight bold))
+    ("已完成" .      (:foreground "green" :weight bold))
+    ;; ("已取消" .     (:background "gray")) 
+    ("已取消" .     (:foreground "gray"))
+))
+
+;; 设置 Org Agenda 快捷键
+(global-set-key (kbd "C-c a") 'org-agenda)
+
+;; 加入到日程列表里
+(setq org-agenda-files (list "~/org/日程/门诊工作量日程.org"))
+
 (use-package org-journal
   :ensure t
   :config
