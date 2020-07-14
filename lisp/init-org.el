@@ -21,14 +21,21 @@
 (global-set-key (kbd "C-c a") 'org-agenda)
 
 ;; 加入到日程列表里
-(setq org-agenda-files (list "~/org/日程/门诊工作量日程.org"))
-
+(setq org-agenda-files (list "~/org/journal"
+			     "~/org/日程/门诊工作量日程.org"))
+;; (add-to-list 'org-agenda-files (expand-file-name "~/org/journal"))
+;; (setq org-agenda-files (list "~/org/org-journal/"))
+;;(add-to-list 'org-agenda-files (expand-file-name "~/org/journal"))
+;; (setq org-agenda-files (list "~/org/journal"))
+;; (setq org-agenda-files (list "~/org/日程/门诊工作量日程.org"))
 (use-package org-journal
   :ensure t
   :config
-  (setq org-journal-dir "~/org/org-journal/"
+  (setq org-journal-dir "~/org/journal/"
         org-journal-date-format "%Y-%m-%d,%A"
-	org-journal-file-format "%Y-%m-%d,%A.org"))
+	org-journal-file-format "%Y-%m-%d,%A.org"
+	;; org-journal-file-type "weekly"
+	))
 
 (use-package org-bullets
   :config
