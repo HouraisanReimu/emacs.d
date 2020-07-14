@@ -1,7 +1,6 @@
 (defvar best-gc-cons-threshold
   4000000
   "Best default gc threshold value.  Should NOT be too big!")
-
 ;; don't GC during startup to save time
 (setq gc-cons-threshold most-positive-fixnum)
 
@@ -69,3 +68,6 @@
   :config
   (set-face-foreground 'paren-face "DimGray")
   )
+
+(setq custom-file (locate-user-emacs-file "~/.emacs.d/lisp/custom.el"))
+(load custom-file :no-error :no-message)
